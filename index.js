@@ -7,7 +7,7 @@ const contactForm = document.getElementById("contactForm");
 const formFeedback = document.getElementById("formFeedback");
 
 // Restore the visitor's preferred theme.
-const savedTheme = localStorage.getItem("portfolio-theme");
+const savedTheme = localStorage.getItem("portfolioTheme");
 if (savedTheme === "dark") {
   document.body.classList.add("dark-theme");
   themeToggle.textContent = "☀";
@@ -40,13 +40,13 @@ filterButtons.forEach((button) => {
 });
 
 // Handle the contact form locally; no backend is connected.
+
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const name = document.getElementById("fullName").value.trim();
-  const email = document.getElementById("emailAddress").value.trim();
+  const email = document.getElementById("email").value.trim();
   const message = document.getElementById("message").value.trim();
-
   if (!name || !email || !message) {
     formFeedback.textContent = "Please complete all fields before sending.";
     return;
