@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Morgan | Frontend Developer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home">AM<span>.</span></a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact-me">Contact</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color theme">☾</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1>Alex Morgan<span>.</span></h1>
+        <h2>Frontend Developer</h2>
+        <p class="hero-description">I build accessible, responsive and engaging digital experiences for the web.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#contact">Hire Me</a>
+          <a class="button button-secondary" href="assets/alex-morgan-cv.pdf" target="_blank">Download CV</a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="portrait-frame">
+          <img src="images/alex-morgan-profile.jpg" alt="Portrait of Alex Morgan">
+        </div>
+        <div class="floating-note"><strong>3+</strong><span>Years learning<br>and building</span></div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="about">
+      <div class="container about-grid">
+        <div>
+          <p class="eyebrow">GET TO KNOW ME</p>
+          <h2 class="section-title">A little about me</h2>
+        </div>
+        <div>
+          <p class="body-copy">I'm a frontend developer who enjoys turning ideas into useful, polished websites. I care about clean code, thoughtful details and experiences that work well on every screen.</p>
+          <p class="body-copy">When I'm not coding, I'm exploring new web technologies and improving my problem-solving skills.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="skills">
+      <p class="eyebrow">WHAT I WORK WITH</p>
+      <h2 class="section-title">My skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><span>01</span><h3>HTML5</h3><p>Semantic and accessible structure</p></div>
+        <div class="skill-card"><span>02</span><h3>CSS3</h3><p>Responsive layouts and styling</p></div>
+        <div class="skill-card"><span>03</span><h3>JavaScript</h3><p>Interactive browser experiences</p></div>
+        <div class="skill-card"><span>04</span><h3>Git</h3><p>Version control and collaboration</p></div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="projects">
+      <div class="container">
+        <p class="eyebrow">SELECTED WORK</p>
+        <h2 class="section-title">Recent projects</h2>
+        <div class="filter-bar" aria-label="Filter projects">
+          <button class="filter-button active" data-filter="all" type="button">All</button>
+          <button class="filter-button" data-filter="web" type="button">Web Design</button>
+          <button class="filter-button" data-filter="javascript" type="button">JavaScript</button>
+        </div>
+        <div class="projects-grid" id="projectsGrid">
+          <article class="project-card" data-category="web">
+            <div class="project-visual visual-one"><span>01 / WEB DESIGN</span></div>
+            <div class="project-info"><h3>Northstar Studio</h3><p>A clean landing page for a creative studio.</p><a href="#contact">View project ↗</a></div>
+          </article>
+          <article class="project-card" data-category="javascript">
+            <div class="project-visual visual-two"><span>02 / JAVASCRIPT</span></div>
+            <div class="project-info"><h3>Daily Tasks</h3><p>A simple task manager with browser storage.</p><a href="#contact">View project ↗</a></div>
+          </article>
+          <article class="project-card" data-category="web">
+            <div class="project-visual visual-three"><span>03 / WEB DESIGN</span></div>
+            <div class="project-info"><h3>Stay Haven</h3><p>A responsive accommodation website concept.</p><a href="#contact">View project ↗</a></div>
+          </article>
+          <article class="project-card" data-category="javascript">
+            <div class="project-visual visual-four"><span>04 / JAVASCRIPT</span></div>
+            <div class="project-info"><h3>Weather Board</h3><p>A small dashboard concept for weather data.</p><a href="#contact">View project ↗</a></div>
+          </article>
+        </div>
+        <p class="empty-state" id="emptyState">No projects found in this category.</p>
+      </div>
+    </section>
+
+    <section class="section container contact-section" id="contact">
+      <div class="contact-intro">
+        <p class="eyebrow">LET'S TALK</p>
+        <h2 class="section-title">Have a project in mind?</h2>
+        <p class="body-copy">Send a message and tell me what you're working on. I'd love to hear about it.</p>
+        <p class="contact-detail">hello@alexmorgan.dev</p>
+      </div>
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="fullName">Your name</label>
+            <input id="fullName" name="name" type="text" placeholder="e.g. Jordan Lee">
+          </div>
+          <div class="form-field">
+            <label for="emailAddress">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me a little about your project..."></textarea>
+        </div>
+        <button class="button button-primary submit-button" type="submit">Send message</button>
+        <p class="form-feedback" id="formFeedback" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#home">AM<span>.</span></a>
+      <p>© 2026 Alex Morgan. Built with care.</p>
+      <a href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
