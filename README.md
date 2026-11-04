@@ -1,5 +1,7 @@
 #Personal Portfolio Website Frontend Debugging Practice
 
+# Project Status - Completed 
+
 #DemoLink :https://krishna4307.github.io/Debugging-Errors-in-Sample-Portfolio-Website-Created-by-AI/
 
   #Project Overview
@@ -7,11 +9,13 @@
     The main objective of this project was to improve real-world frontend debugging skills by identifying and fixing intentionally introduced 
     bugs in an existing website.
     The website represents a fictional frontend developer named Alex Morgan and includes sections for introduction, about, skills, projects, and contact.
+    
 #Technologies Used
   - HTML5 – Website structure and semantic elements.
   - CSS3 – Styling, Flexbox, Grid, responsive design, and themes.
   - JavaScript – DOM manipulation, event handling, project filtering, form validation, and LocalStorage.
   - Browser DevTools – Debugging and inspecting HTML, CSS, and JavaScript.
+  
 # Bugs Identified and Fixed
   During debugging, I investigated and resolved the following issues:
   1. Navigation Issues
@@ -45,12 +49,3 @@
   - Contact form with input validation.
   - Responsive layouts for mobile, tablet, and desktop.
   - Footer with navigation links.
-
-
-  
-
-  # Project Status - Completed 
-
-Corrected the relevant DOM element references.
-
-Tested required-field validation and email validation.
