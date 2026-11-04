@@ -21,23 +21,38 @@ themeToggle.addEventListener("click", () => {
 });
 
 // Filter the project cards.
+
+
 filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    filterButtons.forEach((item) => item.classList.remove("active"));
+
+    filterButtons.forEach((item) => {
+      item.classList.remove("active");
+    });
+
     button.classList.add("active");
 
-    const selectedCategory = button.dataset.category;
+    const selectedCategory = button.dataset.filter;
+
     let visibleCount = 0;
 
     projectCards.forEach((card) => {
-      const shouldShow = selectedCategory === "all" || card.dataset.category === selectedCategory;
+
+      const shouldShow =selectedCategory === "all" || card.dataset.category === selectedCategory;
       card.classList.toggle("is-hidden", !shouldShow);
-      if (shouldShow) visibleCount++;
+
+      if (shouldShow) {
+        visibleCount++;
+      }
+
     });
 
-    emptyState.style.display = visibleCount === 0 ? "block" : "none";
+    emptyState.style.display =
+      visibleCount === 0 ? "block" : "none";
+
   });
 });
+
 
 // Handle the contact form locally; no backend is connected.
 
